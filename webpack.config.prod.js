@@ -11,7 +11,7 @@ let config = {
         app: path.resolve(path.resolve(__dirname + '/src'), 'RegEx.js')
     },
     output: {
-        library: 'BrowserLog',
+        library: 'RegEx',
         libraryTarget: 'umd'
     },
     stats: {
