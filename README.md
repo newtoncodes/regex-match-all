@@ -23,6 +23,62 @@ console.log(JSON.stringify(
     RegEx.matchAll(/asd(\d)(\d)/g, text)
     
 , null, 4));
-console.log(JSON.stringify(RegEx.matchAll(/asd(\d)(\d)/g, text, RegEx.REGEXP_PATTERN_ORDER), null, 4));
-console.log(JSON.stringify(RegEx.matchAll(/asd(\d)(\d)/g, text, RegEx.REGEXP_SET_ORDER), null, 4));
+
+/*
+[
+    [
+        "asd12",
+        "asd23",
+        "asd34"
+    ],
+    [
+        "1",
+        "2"
+    ],
+    [
+        "2",
+        "3"
+    ],
+    [
+        "3",
+        "4"
+    ]
+]
+*/
+
+console.log(JSON.stringify(
+    
+    RegEx.matchAll(/asd(\d)(\d)/g, text, RegEx.REGEXP_PATTERN_ORDER)
+    
+, null, 4));
+
+/*
+    Same as above
+*/
+
+console.log(
+    
+    JSON.stringify(RegEx.matchAll(/asd(\d)(\d)/g, text, RegEx.REGEXP_SET_ORDER)
+    
+, null, 4));
+
+/*
+[
+    [
+        "asd12",
+        "1",
+        "2"
+    ],
+    [
+        "asd23",
+        "2",
+        "3"
+    ],
+    [
+        "asd34",
+        "3",
+        "4"
+    ]
+]
+*/
 ~~~
